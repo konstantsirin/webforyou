@@ -40,21 +40,21 @@ $(function(){
     document.body.removeChild(div);
 
 
-    
+
 
     var lastFocus; // переменая для сохранения фокуса
 
     /*Функция для отключения скролла*/
     function OffScroll() {
-    var winScrollTop = $(window).scrollTop();
-    $(window).bind('scroll',function () {
-    $(window).scrollTop(winScrollTop);
+        var winScrollTop = $(window).scrollTop();
+        $(window).bind('scroll',function () {
+        $(window).scrollTop(winScrollTop);
     });}
 
     /*Функция для учета скролла*/
     var scrollWindow = function() {
 
-        OffScroll ();//Запустили отмену прокрутки скроллом
+
             /*Условие если мобильный или есть поддержка тач событий то...., иначе....*/
             if (scrollWidth == '0px' || isMobile.any() || ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
 
@@ -62,19 +62,23 @@ $(function(){
 
                 $('.button').click(function() {
                     $('body').css('overflow', 'hidden').css('padding-right', '0');
+                    OffScroll ();//Запустили отмену прокрутки скроллом
                 });
 
                 $('.page-header__btn-container, .page-footer__btn').click(function() {
                     $('body').css('overflow', 'hidden').css('padding-right', '0');
+                    OffScroll ();//Запустили отмену прокрутки скроллом
                 });
             } else {
 
                 $('.button').click(function() {
                     $('body').css('overflow', 'hidden').css('padding-right', scrollWidth);
+                    OffScroll ();//Запустили отмену прокрутки скроллом
                 });
 
                 $('.page-header__btn-container, .page-footer__btn').click(function() {
                     $('body').css('overflow', 'hidden').css('padding-right', scrollWidth);
+                    OffScroll ();//Запустили отмену прокрутки скроллом
                 });
             }
         };
