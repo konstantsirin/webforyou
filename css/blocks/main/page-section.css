@@ -1,0 +1,240 @@
+.page-section__btn {
+    font-size: 18px;
+
+    padding: 20px 70px;
+
+    color: #fff;
+    border: 1px solid #ff4e2e;
+    background-color: #ff4e2e;
+}
+
+.page-section__btn:hover,
+.page-section__btn:focus {
+    color: #ff4e2e;
+    border: 1px solid #ff4e2e;
+    background-color: #fbfbfb;
+}
+
+.page-section {
+    padding-top: 100px;
+    padding-bottom: 90px;
+}
+
+.page-section--background {
+    background-color: #fbfbfb;
+}
+
+.page-section__container {
+    display: -ms-grid;
+    display:     grid;
+
+    word-wrap: break-word;
+
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+    -ms-grid-columns: 1fr 2vw 1fr 2vw 1fr 2vw 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2vw;
+}
+
+.page-section__container > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.page-section__container > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+.page-section__container > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+}
+
+.page-section__container > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+}
+
+.page-section__subtitle--icon-1,
+.page-section__subtitle--icon-2,
+.page-section__subtitle--icon-3,
+.page-section__subtitle--icon-4 {
+    margin: 0 auto;
+
+    background-repeat: no-repeat;
+    background-size: 75px 75px;
+    background-position: top center;
+}
+
+.page-section__subtitle--icon-1 {
+    background-image: url('../../../img/tools-and-utensils@1x.png');
+}
+
+.page-section__subtitle--icon-2 {
+    background-image: url('../../../img/responsive@1x.png');
+}
+
+.page-section__subtitle--icon-3 {
+    background-image: url('../../../img/programming@1x.png');
+}
+
+.page-section__subtitle--icon-4 {
+    background-image: url('../../../img/coding@1x.png');
+}
+
+.page-section__subtitle {
+    font-size: inherit;
+    font-weight: normal;
+    line-height: inherit;
+
+    padding-top: 100px;
+}
+
+.page-section__item {
+    font-size: 20px;
+    line-height: 30px;
+
+    display: block;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #8993ad;
+}
+
+.page-section__title {
+    font-size: 54px;
+
+    margin-bottom: 100px;
+
+    text-align: center;
+}
+
+.page-section__btn-container {
+    text-align: center;
+
+    margin-top: 100px;
+}
+
+.page-section__slider-box {
+    position: relative;
+}
+
+.page-section__slider-text {
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.page-section__slide {
+    font-size: 20px;
+
+    display: block;
+
+    text-align: center;
+
+    color: #8993ad;
+}
+
+.page-section__prv-b,
+.page-section__nxt-b {
+    position: absolute;
+
+    cursor: pointer;
+
+    border: none;
+    background-color: transparent;
+}
+
+.page-section__prv-b {
+    top: 30%;
+    left: -20px;
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url('../../../img/arrow.png');
+    background-repeat: no-repeat;
+
+    -webkit-filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, .08));
+    filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, .08));
+}
+
+.page-section__nxt-b {
+    top: 30%;
+    right: -20px;
+
+    width: 60px;
+    height: 60px;
+
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+
+    background-image: url('../../../img/arrow.png');
+    background-repeat: no-repeat;
+
+    -webkit-filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, .08));
+    filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, .08));
+}
+
+@media (max-width: 1024px) {
+    .page-section__container {
+        -ms-grid-columns: 1fr 5vw 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5vw;
+    }
+
+    .page-section__item {
+        width: 270px;
+    }
+
+    .page-section-work__prv-b,
+    .page-section-work__nxt-b {
+        display: none;
+    }
+
+    .page-section__prv-b,
+    .page-section__nxt-b {
+        display: none;
+    }
+}
+
+@media (max-width: 660px) {
+    .page-section__btn {
+        font-size: 16px;
+    }
+
+    .page-section {
+        padding-top: 50px;
+    }
+
+    .page-section__container {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10vw;
+    }
+
+    .page-section__item {
+        font-size: 16px;
+    }
+
+    .page-section__btn-container {
+        margin-top: 55px;
+        margin-bottom: 50px;
+    }
+
+    .page-section__title {
+        font-size: 30px;
+
+        margin-bottom: 45px;
+    }
+
+    .page-section__slider-text {
+        font-size: 18px;
+
+        margin-top: 20px;
+    }
+}
